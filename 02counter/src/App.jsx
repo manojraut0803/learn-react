@@ -9,7 +9,21 @@ function App() {
     if (count >= 14) {
       return;
     }
+
+    // Intw: what is the o/p 
     setCount(count + 1);
+    // setCount(count + 1);
+    // setCount(count + 1);
+    // setCount(count + 1);
+
+    // Ans: useState Batche || same work again and again (setCount)
+    // setCout(prevCount => prevCount + 1)
+
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+
     console.log(count);
   }
 
