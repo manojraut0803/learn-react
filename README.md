@@ -78,6 +78,11 @@ const [count, setCount] = useState(10);
 
 ```
 
+## state
+```
+useState
+```
+
 ## Styles
 ```
 Tailwind CSS
