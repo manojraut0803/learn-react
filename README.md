@@ -2,7 +2,9 @@
 
 ## Can I use React without a framework?
 ```
-You can use React without a framework, however we’ve found that most apps and sites eventually build solutions to common problems such as code-splitting, routing, data fetching, and generating HTML. These problems are common to all UI libraries, not just React.
+You can use React without a framework, however we’ve found that most apps and 
+sites eventually build solutions to common problems such as code-splitting, routing, 
+data fetching, and generating HTML. These problems are common to all UI libraries, not just React.
 ```
 ## Starting React
 ```
@@ -62,4 +64,16 @@ function Demo(){
     )
 }
 export default Demo
+```
+
+>We can create our own react library and JSX
+
+## Hooks
+```
+Hooks let you use different React features from your components. 
+You can either use the built-in Hooks or combine them to build your own
+
+
+const [count, setCount] = useState(10);
+
 ```
