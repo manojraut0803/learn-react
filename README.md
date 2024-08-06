@@ -78,9 +78,20 @@ const [count, setCount] = useState(10);
 
 ```
 
-## state
+## Hooks
 ```
 useState
+        - useState is a React Hook that lets you add a state variable to your component.
+
+useCallback
+        - useCallback is a React Hook that lets you cache a function definition between re-renders.
+
+useEffect
+        - useEffect is a React Hook that lets you synchronize a component with an external system.
+
+useRef
+        - useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+
 ```
 
 ## Styles
@@ -96,6 +107,7 @@ Properties
 ## Projects
 - counter
 - bgChanger
-- 
+- passwordGenerator
+
 
 
