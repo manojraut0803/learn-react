@@ -77,3 +77,14 @@ You can either use the built-in Hooks or combine them to build your own
 const [count, setCount] = useState(10);
 
 ```
+
+## Styles
+```
+Tailwind CSS
+```
+
+## Props
+```
+Properties
+```
+
