@@ -94,6 +94,9 @@ useRef
 
 useID
         - useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+
+useLoaderData
+        - 
 -------------------------------------------------
 Custom Hooks
 ============
@@ -111,12 +114,35 @@ Tailwind CSS
 Properties
 ```
 
+## React Router
+
+[React Router](https://reactrouter.com/en/main)
+```
+Link        -> in place of a tag [page reload/refresh in a tag]
+NavLink     
+react-router-dom
+    Link
+    NavLink
+
+    Outlet
+
+    createBrowserRouter
+    
+        - This is the recommended router for all React Router web projects. It uses the DOM History API to update the URL and manage the history stack.
+    createRouterFromElements
+    Route
+        - Routes are perhaps the most important part of a React Router app. They couple URL segments to components, data loading and data mutations. Through route nesting, complex application layouts and data dependencies become simple and declarative.
+
+        =>path, element, loader, action, errorElement
+    RouterProvider
+        - All data router objects are passed to this component to render your app and enable the rest of the data APIs.
+
+```
+
 ## Projects
 - counter
 - bgChanger
 - passwordGenerator
 - currencyConverter
-
-
-
+- website(reactRaouter)
 
