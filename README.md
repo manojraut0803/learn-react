@@ -145,9 +145,17 @@ react-router-dom
 ```
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
+ With Context API, you can store data at the top level of the component tree and make it available to all other components that need it without passing props.
+
+How the Context API Works
+Context API allows data to be passed through a component tree without having to pass props manually at every level. This makes it easier to share data between components.
+
 context => global variable
 provider => 
 State management
+prop drilling => Prop drilling can make your code more  
+                difficult to read and maintain, and can 
+                also make it harder to refactor your components later on.
 ================
 
 
