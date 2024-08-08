@@ -97,6 +97,9 @@ useID
 
 useLoaderData
         - 
+
+useContext
+        - useContext is a React Hook that lets you read and subscribe to context from your component.
 -------------------------------------------------
 Custom Hooks
 ============
@@ -138,6 +141,17 @@ react-router-dom
         - All data router objects are passed to this component to render your app and enable the rest of the data APIs.
 
 ```
+## context API
+```
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+context => global variable
+provider => 
+State management
+================
+
+
+```
 
 ## Projects
 - counter
@@ -145,4 +159,6 @@ react-router-dom
 - passwordGenerator
 - currencyConverter
 - website(reactRaouter)
+- contextAPI
+
 
