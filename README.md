@@ -152,6 +152,7 @@ Context API allows data to be passed through a component tree without having to 
 
 context => global variable
 provider => 
+
 State management
 prop drilling => Prop drilling can make your code more  
                 difficult to read and maintain, and can 

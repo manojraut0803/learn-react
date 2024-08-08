@@ -7,12 +7,15 @@ function Login() {
 
   const { setUser } = useContext(UserContext);
 
+  // const { text } = useContext(UserContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setUser({ username, password });
   };
 
   return (
+    <>
     <div style={{textAlign:"center"}}>
       <h3>Login</h3>
       <input
@@ -29,6 +32,11 @@ function Login() {
       />
       <button onClick={handleSubmit}>Submit</button>
     </div>
+
+    {/* <div>
+      {text}
+    </div> */}
+    </>
   );
 }
 
