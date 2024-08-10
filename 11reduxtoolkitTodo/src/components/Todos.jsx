@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo, updateTodo } from "../features/todo/todoSlice";
 
@@ -21,6 +21,11 @@ function Todos() {
     setEditMode(null); // Exit edit mode after updating
   };
 
+  // local Storage
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]); // Sync todos with local storage whenever it changes
+
   return (
     <>
       <div className="py-8">Todos</div>
@@ -28,7 +33,6 @@ function Todos() {
       {todos.map((todo) => (
         <div key={todo.id}>
           {editMode === todo.id ? (
-
             // Edit Mode
             <form onSubmit={(e) => handleUpdate(e, todo.id)}>
               <input
@@ -37,15 +41,25 @@ function Todos() {
                 onChange={(e) => setEditText(e.target.value)}
               />
               <div>
-                <button className="px-3" type="submit" >Save</button>
-                <button className="px-3" type="button" onClick={() => setEditMode(null)}> Cancel</button>
+                <button className="px-3" type="submit">
+                  Save
+                </button>
+                <button
+                  className="px-3"
+                  type="button"
+                  onClick={() => setEditMode(null)}
+                >
+                  {" "}
+                  Cancel
+                </button>
               </div>
             </form>
           ) : (
             // Display Mode
             <>
               {todo.text} <br />
-              <button onClick={() => handleEdit(todo)}>Edit</button><br />
+              <button onClick={() => handleEdit(todo)}>Edit</button>
+              <br />
               <button onClick={() => dispatch(removeTodo(todo.id))}>X</button>
             </>
           )}
