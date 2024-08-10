@@ -147,11 +147,15 @@ Context provides a way to pass data through the component tree without having to
 
  With Context API, you can store data at the top level of the component tree and make it available to all other components that need it without passing props.
 
+ This is especially useful for global data, such as user authentication, theme settings, or language preferences.
+
 How the Context API Works
 Context API allows data to be passed through a component tree without having to pass props manually at every level. This makes it easier to share data between components.
 
-context => global variable
-provider => 
+context => global variable  || createContext
+provider => Provider
+consumer => Consumer
+useContext => useContext
 
 State management
 prop drilling => Prop drilling can make your code more  
@@ -159,8 +163,19 @@ prop drilling => Prop drilling can make your code more
                 also make it harder to refactor your components later on.
 
 import from react
-    createContext
-    useContext
+    const MyContext = Ract.createContext(defaultValues)                                 
+                                                     # create context object. When React renders a component that
+                                                        subscribes to this Context object, it will read the current
+                                                        context value from the closest matching Provider above it in the tree.
+
+    <MyContext.Provider value={}>
+          {/* children components */}
+    </MyContext.Provider>                           # The Provider component is used to wrap the part of your app 
+                                                        where you want the context to be available
+
+    
+    const value = useContext(MyContext);            # In functional components, you can use the useContext hook to access the 
+                                                        context value directly
 
 
 ================
@@ -175,6 +190,59 @@ import from react
  clear()
 ```
 
+
+## Redux and Redux toolkit
+```
+redux       core library
+=====
+-- A JS library for predictable and maintainable global state management
+    Predictable
+    Centralized
+    Debuggable
+    Flexible
+
+
+react-redux
+-----------
+-- Official React bindings for Redux
+
+REDUX
+store
+action
+reducer
+
+REACT
+useSelecter
+dispatch
+
+methods
+    useSelector
+    useDispatch
+
+
+redux-toolkit       Implimentation of Redux for wiring for conversation.
+=============
+-- The official, opinionated, batteries-included toolset for efficient Redux development
+
+Always start with 
+1) store [single source of truth]         configureStore sets up the store with good defaults, 
+        [only file can be use in one proj]  including middleware and DevTools integration.
+
+
+2) slices               A slice is a collection of Redux [reducer] logic and actions for 
+    [createSlice]       a single feature of your app. It combines createSlice to generate 
+                        actions and reducers automatically.
+
+                        a) name
+                        b) initialState
+                        c) reducers
+
+
+3) useSelecter
+4) useDispatch  dispatch <-> reducer <-> store
+
+```
+
 ## Projects
 - counter
 - bgChanger
@@ -183,5 +251,6 @@ import from react
 - website(reactRaouter)
 - contextAPI
 - todo (contextAPI & local storage )
+- todo (redux-toolkit)
 
 
