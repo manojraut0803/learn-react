@@ -161,9 +161,18 @@ prop drilling => Prop drilling can make your code more
 import from react
     createContext
     useContext
+
+
 ================
+```
 
+## Local Storage 
+```
+ setItem()
+ getItem()
 
+ removeItem()
+ clear()
 ```
 
 ## Projects
@@ -173,5 +182,6 @@ import from react
 - currencyConverter
 - website(reactRaouter)
 - contextAPI
+- todo (contextAPI & local storage )
 
 
